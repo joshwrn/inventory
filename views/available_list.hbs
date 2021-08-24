@@ -1,0 +1,10 @@
+<div class='market__title__container'>
+  <p class='market__creator__title'>Available NFTs</p>
+  <div class='market__feed'>
+    {{#each data.nfts}}
+      <a href={{this.nft.url}}>
+        <img class='market__feed__img' src={{this.nft.src}} alt='' />
+      </a>
+    {{/each}}
+  </div>
+</div>

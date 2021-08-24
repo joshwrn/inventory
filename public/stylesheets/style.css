@@ -1,0 +1,513 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: font;
+  src: url(../fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: font-bold;
+  src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
+* {
+  font: 62.5% font, Helvetica, Arial, sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  font-size: 1.6rem;
+}
+
+/*+ nav bar */
+
+nav div {
+  font-size: 1.5rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav a,
+nav p {
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav__search {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.nav__logo {
+}
+
+.nav__center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo__img {
+  width: 50px;
+  height: 50px;
+}
+
+/*@ links */
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: border-color 1.15s;
+}
+
+.nav__links a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  border-color: transparent;
+  padding: 5px 5px;
+}
+
+.nav__links a:hover {
+  border-color: white;
+}
+
+/*@ search bar */
+
+.nav__search__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 15px;
+  background: rgba(88, 88, 88, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.281);
+  border-radius: 20px;
+  height: 15px;
+  width: 175px;
+  position: relative;
+}
+
+.search-icon {
+  font-size: 2rem !important;
+}
+
+.nav__search__input {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 135px;
+}
+
+input,
+select,
+textarea {
+  padding-left: 10px;
+  text-align: left;
+}
+
+input::placeholder {
+  color: grey;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/*+ homepage */
+
+.hero__container {
+  display: flex;
+  overflow: hidden;
+}
+
+.hero__video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero__gradient {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(transparent, #000000);
+}
+
+.content__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.button__container {
+  display: flex;
+  gap: 20px;
+}
+
+.home__btn--outline {
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  height: 47px;
+  width: 200px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.home__btn--outline:hover {
+  transform: translateY(-2px);
+}
+
+.home__btn__span--outline {
+  font-size: 1.7rem;
+  font-family: font-bold;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__btn {
+  background-color: white;
+  border: none;
+  height: 47px;
+  width: 200px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.25s;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+}
+
+.home__btn__span {
+  color: white;
+  font-size: 1.7rem;
+  font-family: font-bold;
+}
+
+.home__btn:hover {
+  transform: translateY(-2px);
+}
+
+/*+ marketplace page */
+
+.market__container {
+  padding: 130px 50px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/*@ sidebar */
+
+.market__sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.market__sidebar__header {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.market__sidebar__section {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.market__sidebar__section:hover {
+  color: rgb(177, 177, 177);
+}
+
+/*@ feed */
+.market__feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 35px;
+}
+
+.market__feed__img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.market__feed__img:hover {
+  transform: translateY(-2px);
+}
+
+.market__creator__title {
+  font-size: 3rem;
+  font-weight: bold;
+  width: fit-content;
+}
+
+/*+ NFTs details page */
+
+.nft__container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.nft__image__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.nft__image {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*@ Details Section */
+
+.nft__details {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.nft__title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.nft__creator {
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.nft__creator:hover {
+  color: rgb(177, 177, 177);
+}
+
+.nft__category {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gray;
+  width: fit-content;
+}
+
+.nft__category:hover {
+  color: rgb(177, 177, 177);
+}
+
+.nft__price {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.nft__price__label {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nft__divider {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.nft__status {
+  font-size: 2rem;
+  color: gray;
+}
+
+.nft__delete {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 1.5rem;
+  border: 1px solid rgba(124, 124, 124, 0.281);
+  border-radius: 10px;
+  width: 125px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/*+ creator feed */
+
+.market__title__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.market__list__feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.market__creator__feed {
+  display: flex;
+  gap: 10px;
+}
+
+.market__creator__name {
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.market__creator__name:hover {
+  color: rgb(177, 177, 177);
+}
+
+/** NFT create Form */
+
+.nft__form__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.151);
+  border-radius: 20px;
+  gap: 20px;
+}
+
+.nft__form__label {
+  font-size: 1.6rem;
+}
+
+.nft__form__control {
+  padding: 0em 10px 0 10px;
+  background: rgba(32, 32, 32, 0.25);
+  border: 1px solid rgba(124, 124, 124, 0.281);
+  border-radius: 10px;
+  height: 30px;
+  width: 200px;
+  font-size: 1.6rem;
+}
+
+.nft__form__btn {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 8px 32px;
+  font-size: 1.6rem;
+  border: 1px solid rgba(124, 124, 124, 0.281);
+  border-radius: 10px;
+  width: 150px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/*$ about page */
+
+.about__hero__container {
+  display: flex;
+  position: fixed;
+  z-index: -1;
+}
+
+.about__gradient {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, transparent, #000000 70%);
+}
+
+.about__hero {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.about__header {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.about__container {
+  padding: 150px 50px;
+  position: relative;
+  z-index: 3;
+  width: 50vw;
+}
+
+.about__description {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: rgb(192, 192, 192);
+}

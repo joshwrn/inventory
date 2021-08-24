@@ -1,0 +1,27 @@
+<div class='nft__container'>
+  <div class='nft__image__container'>
+    <img class='nft__image' src={{nft.src}} alt='' />
+  </div>
+  <div class='nft__details'>
+    <p class='nft__title'>{{nft.title}}</p>
+    <a href={{nft.creator.url}} class='nft__creator'>{{nft.creator.name}}</a>
+    <a href={{category.url}} class='nft__category'>{{category.name}}</a>
+    <p class='nft__price'>{{nft.price}}
+      <span class='nft__price__label'>BTC</span>
+      <span class='nft__divider'>|</span>
+      {{#if nft_instance}}
+        <span class='nft__status'>Available</span>
+      {{else}}
+        <span class='nft__status'>Sold</span>
+      {{/if}}
+    </p>
+    {{#if nft_instance}}
+      <a href={{nft_buy}}>
+        <button class='nft__delete'>Buy</button>
+      </a>
+    {{/if}}
+    <a href={{nft_delete}}>
+      <button class='nft__delete'>Delete</button>
+    </a>
+  </div>
+</div>
